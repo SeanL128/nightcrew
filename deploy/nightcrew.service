@@ -1,0 +1,12 @@
+[Unit]
+Description=nightcrew nightly build run (pick, build, gate, PR)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/nightcrew
+ExecStart=%h/.local/bin/uv run nightcrew run
+Environment=PATH=%h/.npm-global/bin:%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+EnvironmentFile=-%h/nightcrew/.env
+TimeoutStartSec=4h

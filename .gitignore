@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.DS_Store
+nightcrew.db
+.vps.json
+
+# internal — never enters the public tree
+LAUNCH.md
+CLAUDE.md
+AGENTS.md
+TODO.md
+BACKLOG.md
+BRAINSTORM.md
+PITCH.md
+eve.md
+fleet.json
+docs/integrations-private.md

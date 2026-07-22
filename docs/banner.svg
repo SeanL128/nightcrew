@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 200" role="img" aria-label="nightcrew">
+  <rect width="880" height="200" rx="12" fill="#0d0d0c"/>
+  <text x="440" y="102" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="500" font-size="72" fill="#ffffff" letter-spacing="-1">nightcrew</text>
+  <text x="440" y="148" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#8a8f86" letter-spacing="4">autonomous build agent</text>
+</svg>

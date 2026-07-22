@@ -1,0 +1,14 @@
+# nightcrew.yaml — the shared contract (ADR-19). Lives at the repo root.
+config:
+  test_cmd: "python -m pytest -q"   # required; gate.py re-runs this independently
+  off_limits: ["deploy/", ".github/workflows/"]   # paths the builder must not touch
+  conventions: "Short prose the builder must follow (style, layout, tooling)."
+
+items:
+  - id: kebab-case-unique-id
+    description: >
+      One buildable unit of work, described concretely.
+    acceptance_criteria:            # >=2 concrete, evidence-citable criteria
+      - "some_fn('input') returns 'expected'"
+      - "pytest tests cover the case above and the full suite passes"
+    deps: []                        # ids that must be done (merged) first

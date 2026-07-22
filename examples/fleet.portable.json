@@ -1,0 +1,37 @@
+{
+  "repos": [
+    {
+      "name": "my-repo",
+      "github": "you/my-repo",
+      "path": "/abs/path/to/local/checkout",
+      "enabled": true,
+      "priority": 1,
+      "trust": "propose_only",
+      "max_items_per_run": 1
+    }
+  ],
+  "caps": {
+    "daily_usd": 5.0,
+    "per_run_usd": 2.0,
+    "max_items": 3
+  },
+  "dispatch": {
+    "roles": {
+      "foreman-build": {
+        "backend": "command",
+        "argv": [
+          "claude", "-p",
+          "--model", "claude-sonnet-5",
+          "--output-format", "json",
+          "--permission-mode", "acceptEdits",
+          "{brief_text}"
+        ]
+      },
+      "nightcrew-judge": {
+        "backend": "openrouter",
+        "model": "openai/gpt-5.6",
+        "family": "openai"
+      }
+    }
+  }
+}

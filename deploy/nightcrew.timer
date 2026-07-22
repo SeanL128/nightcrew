@@ -1,0 +1,9 @@
+[Unit]
+Description=nightcrew nightly run at 02:00 box-local
+
+[Timer]
+OnCalendar=*-*-* 02:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
