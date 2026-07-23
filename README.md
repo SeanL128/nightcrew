@@ -14,6 +14,14 @@
 
 I built Nightcrew because I wanted an autonomous agent that could build from my backlogs overnight without me having to trust its word that the work is done. Coding agents are happy to open a pull request and declare success, and I found that checking those claims by hand costs almost as much as writing the code myself. Nightcrew hard-blocks every pull request behind a verification gate that re-runs the tests independently, checks that the builder didn't weaken them, and makes a judge from a different model family cite concrete evidence for every acceptance criterion, so the PR that lands in front of me carries its own proof.
 
+<div align="center">
+
+<img src="docs/evidence-table.png" alt="A Nightcrew pull request: the verification gate passed, with a criterion-by-criterion evidence table in the PR body" width="760" />
+
+<sub>Every Nightcrew PR body is its own evidence table — each acceptance criterion mapped to concrete proof in the diff.</sub>
+
+</div>
+
 ## Features
 
 - **Verification gate** — an independent test re-run, a tamper check that blocks removed or weakened tests, and an evidence judge that maps each acceptance criterion to concrete evidence in the diff before any PR can open.
